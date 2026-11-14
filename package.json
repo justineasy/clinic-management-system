@@ -9,5 +9,5 @@
     "demo": "DEMO=1 DB=:memory: node server.js",
     "test": "node test.js"
   },
-  "engines": { "node": ">=22.13" }
+  "engines": { "node": "24.x" }
 }
