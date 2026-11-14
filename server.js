@@ -1,7 +1,10 @@
 // ClinicHub multi-clinic management: run with `node server.js`, open http://localhost:3737
 // No dependencies: Node's built-in http, sqlite and crypto. Code lives in ./lib:
 //   core.js (database + helpers), ui.js (layout), routes-desk.js (front desk), routes-owner.js (owner pages).
-const { http, path, here, db, list, today, getUser } = require('./lib/core');
+// On Vercel (no permanent disk) always run as the public demo with a throwaway database in /tmp.
+if (process.env.VERCEL) { process.env.DB ||= '/tmp/clinichub-demo.db'; process.env.DEMO ||= '1'; }
+const http = require('node:http');
+const { path, here, db, list, today, getUser } = require('./lib/core');
 const { page, send, redirect, setPath } = require('./lib/ui');
 
 if (process.env.DEMO) require('./lib/demo').seedDemo();
