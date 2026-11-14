@@ -12,7 +12,7 @@ node test.js          # self-check
 On the first visit, create the owner account. Then add clinics (**Clinics**) and employees (**Staff**).
 
 ## Live demo (Vercel)
-The `api/` folder runs the app on Vercel in **demo mode** with sample data (4 clinics, staff, bills, stock).
+On Vercel, `server.js` runs in **demo mode** with sample data (4 clinics, staff, bills, stock).
 Vercel has no permanent disk, so demo data resets when the server restarts. **Use a VPS (below) for a real clinic.**
 Demo logins are shown on the login page. Run the same demo locally with `npm run demo` (macOS/Linux) or `set DEMO=1&& set DB=:memory:&& node server.js` (Windows).
 
