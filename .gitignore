@@ -1,0 +1,7 @@
+clinic.db
+clinic.db-*
+backups/
+node_modules/
+.vercel/
+.claude/
+*.log
